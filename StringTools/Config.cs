@@ -16,9 +16,9 @@ namespace StringTools
         /// 命令行头部信息
         /// </summary>
         public static string headStr = @"------------------------------------
-字符串处理工具v.02 -- [墨云软件]
+StringTools v.02 -- [墨云软件]
 ------------------------------------
-命令行工具，帮助请输入“help”或“？”
+cmd，input “help” or “？” for help
 ";
         /// <summary>
         /// 脚本文件

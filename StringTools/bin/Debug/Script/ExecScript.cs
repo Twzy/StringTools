@@ -32,12 +32,14 @@ namespace StringTools
             CommandList.Add("sbr", "sbr\r\n   -- 字符串封装StringBuilder");
             CommandList.Add("regex", "regex [1]\r\n   -- 正则表达式匹配");
             CommandList.Add("popo", "popo\r\n   -- 这都是泡沫");			
-            CommandList.Add("setstr", "setstr\r\n   -- 设置模板数据");
-			CommandList.Add("showstr", "showstr\r\n   -- 显示模板数据");
+            CommandList.Add("setbuff", "setstr\r\n   -- 设置模板数据");
+			CommandList.Add("showbuff", "showstr\r\n   -- 显示模板数据");
 			CommandList.Add("putstr", "putstr\r\n   -- 生成数据");	
+			CommandList.Add("for","for [1] [2] [3]\r\n  -- 循环加索引 [1] 起始值 [2] 最大值 [3] 步长");
 
 			
             CommandList.Add("print", "print [1]\r\n   -- 向输出打印数据");
+			CommandList.Add("up", "up\r\n   -- 将输出结果作为输入");
             CommandList.Add("cls", "cls\r\n   -- 清理命令区域内容");
             CommandList.Add("?", "?\r\n   -- 帮助 同 “help”");
             CommandList.Add("help", "help\r\n   -- 帮助 同 “?”");
@@ -137,18 +139,25 @@ namespace StringTools
                     case "repregx":
                         Print(Regex.Replace(inptuText, arr[1], arr[2]));
                         break;
-					case "setstr":
-					   modelStr=cmd.TrimStart(new char[]{' '});
-					   modelStr=modelStr.Substring(6);
+					case "setbuff":
+					   //modelStr=cmd.TrimStart(new char[]{' '});
+					   modelStr=inptuText;//modelStr.Substring(6);
+					   LabStatus.Text="缓冲区:"+modelStr;
 					   WriteCommand("");
                        break;
-					case "showstr": 
+					case "showbuff": 
 					   Print(modelStr);
+					   break;
+					case "for":
+					    Print(ForModelStr(arr[1],arr[2],arr[3]));
 					   break;
 					case "putstr":
 					   Print(GetModelStr(inptuText,arr));
 					   break;
-					   
+					case "up":
+					   CurrMainForm.txtInput.Text = CurrMainForm.txtOutput.Text;
+					   Print("");
+                       break;					
                     case "cmdlst":
                         StringBuilder cmdListStr = new StringBuilder();
                         var cmdList=CommandList.Keys.ToArray();
@@ -220,6 +229,24 @@ namespace StringTools
 			return sbr.ToString();
 		}
 		
+		private string ForModelStr(string start,string max,string step)
+		{
+			int i=int.Parse(start);
+			int l=int.Parse(max);
+			int s=int.Parse(step);
+			
+			StringBuilder sbr = new StringBuilder();
+           
+            for ( ; i <= l; i+=s)
+            {
+               sbr.AppendFormat(modelStr,i);
+			   sbr.AppendLine();
+            }
+            
+			return sbr.ToString();
+			
+		}
+	
 		
 		//获取帮助文档
         public string HelpDoc()

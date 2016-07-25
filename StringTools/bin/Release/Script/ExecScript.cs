@@ -25,11 +25,12 @@ namespace StringTools
             CommandList.Add("rep", "rep [1] [2]\r\n   -- 字符串替换,[1] 目标，[2] 替换内容");
             CommandList.Add("repregx", "repregx [1] [2]\r\n   -- 字符串替换,[1] 正则表达式 ,[2] 替换内容");
             CommandList.Add("idx", "idx [1]\r\n   -- 顺序查找字符位置,[1] 字符");
-            CommandList.Add("ldx", "ldx [1]\r\n   -- 逆序查找字符位置,[1] 字符");
             CommandList.Add("len", "len\r\n   -- 字符串长度");
             CommandList.Add("spl", "spl [1]\r\n   -- 字符串按指定字符分为行,[1]字符 ");
             CommandList.Add("spe", "spe [1] [2] [3] [4]\r\n   -- 字符串替换扩展,[1] 目标，[2] 左侧 [3] 右侧 [4] 替换内容");
             CommandList.Add("sbr", "sbr\r\n   -- 字符串封装StringBuilder");
+			CommandList.Add("Num2Str", "Num2Str [1] [2]\r\n   -- 数字转为字符串，[1] 为 2、8、10、16");
+			CommandList.Add("Str2Num", "Str2Num [1] [2]\r\n   -- 字符串转为数字，[1] 为 2、8、10、16");
             CommandList.Add("regex", "regex [1]\r\n   -- 正则表达式匹配");
             CommandList.Add("popo", "popo\r\n   -- 这都是泡沫");			
             CommandList.Add("setbuff", "setstr\r\n   -- 设置模板数据");
@@ -96,6 +97,12 @@ namespace StringTools
                     case "sbr":
                         Print(inptuText.ToStringBuilder());
                         break;
+				    case "Num2Str":
+					    WriteCommand(Convert.ToString(int.Parse(arr[2]),int.Parse(arr[1])));
+						break;
+					case "Str2Num":
+					    WriteCommand(Convert.ToInt32(arr[2],int.Parse(arr[1])).ToString());
+					    break;
 				    case "popo":
 					    StringBuilder popSbr=new StringBuilder();
                         for (int pop1 = 0; pop1 < 1000; pop1++)

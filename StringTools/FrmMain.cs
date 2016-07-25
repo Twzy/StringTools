@@ -34,8 +34,7 @@ namespace StringTools
                 IniteConsole();//初始化命令行控件
                 IniteAutoCompete();//初始化自动补全控件
             }
-
-      
+       
         }
 
 
@@ -93,7 +92,6 @@ namespace StringTools
         {
             //通过加载脚本获取的实体 执行输入的命令
             cmdEntity.Exec(e.Message, txtInput.Text);
-
 
         }
         #endregion

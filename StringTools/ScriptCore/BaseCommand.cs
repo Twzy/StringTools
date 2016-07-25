@@ -123,11 +123,7 @@ namespace StringTools
         /// </summary>
         internal void IniteBtn()
         {
-            CurrMainForm.btnNo1.Click += OnbtnNo_Click;
-            CurrMainForm.btnNo2.Click += OnbtnNo_Click;
-            CurrMainForm.btnNo3.Click += OnbtnNo_Click;
-            CurrMainForm.btnNo4.Click += OnbtnNo_Click;
-            CurrMainForm.btnNo5.Click += OnbtnNo_Click;
+         
         }
         /// <summary>
         /// 单击事件方法

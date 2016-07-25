@@ -28,7 +28,7 @@ namespace AutocompleteMenuNS
             base.Font = new Font(FontFamily.GenericSansSerif, 9);
             ItemHeight = Font.Height + 2;
             VerticalScroll.SmallChange = ItemHeight;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(0x5E, 0x5E, 0x5E);
             labTip.Hide();
         }
 
@@ -117,8 +117,8 @@ namespace AutocompleteMenuNS
         {
             bool rtl = RightToLeft == RightToLeft.Yes;
             AdjustScroll();
-            int startI = VerticalScroll.Value / ItemHeight - 1;
-            int finishI = (VerticalScroll.Value + ClientSize.Height) / ItemHeight + 1;
+            int startI = VerticalScroll.Value / ItemHeight;
+            int finishI = (VerticalScroll.Value + ClientSize.Height) / ItemHeight;
             startI = Math.Max(startI, 0);
             finishI = Math.Min(finishI, VisibleItems.Count);
             int y = 0;
@@ -130,38 +130,39 @@ namespace AutocompleteMenuNS
 
                 if (ImageList != null && VisibleItems[i].ImageIndex >= 0)
                     if (rtl)
-                        e.Graphics.DrawImage(ImageList.Images[VisibleItems[i].ImageIndex], Width - 1 - leftPadding, y);
+                        e.Graphics.DrawImage(ImageList.Images[VisibleItems[i].ImageIndex], Width - leftPadding, y);
                     else
                         e.Graphics.DrawImage(ImageList.Images[VisibleItems[i].ImageIndex], 1, y);
 
-                var textRect = new Rectangle(leftPadding, y, ClientSize.Width - 1 - leftPadding, ItemHeight - 1);
+                var textRect = new Rectangle(leftPadding, y, ClientSize.Width, ItemHeight);
                 if (rtl)
-                    textRect = new Rectangle(1, y, ClientSize.Width - 1 - leftPadding, ItemHeight - 1);
+                    textRect = new Rectangle(0, y, ClientSize.Width, ItemHeight);
 
                 if (i == SelectedItemIndex)
                 {
                     //Brush selectedBrush = new LinearGradientBrush(new Point(0, y - 3), new Point(0, y + ItemHeight),
                     //                                              Color.White, Color.Orange);
 
-                    Brush selectedBrush = new SolidBrush(Color.DeepSkyBlue);
-                    e.Graphics.FillRectangle(selectedBrush,textRect );
-                    e.Graphics.DrawRectangle(Pens.DeepSkyBlue,textRect);
+                    Brush selectedBrush = new SolidBrush(Color.Yellow);
+                    e.Graphics.FillRectangle(selectedBrush, textRect);
+                    e.Graphics.DrawRectangle(Pens.Yellow, textRect);
                 }
                 if (i == hoveredItemIndex)
-                    e.Graphics.DrawRectangle(Pens.Red, textRect);
+                    e.Graphics.DrawRectangle(Pens.Yellow, textRect);
 
                 var sf = new StringFormat();
                 if (rtl)
                     sf.FormatFlags = StringFormatFlags.DirectionRightToLeft;
 
                 var args = new PaintItemEventArgs(e.Graphics, e.ClipRectangle)
-                               {
-                                   Font = Font,
-                                   TextRect = new RectangleF(textRect.Location, textRect.Size),
-                                   StringFormat = sf,
-                                   IsSelected = i == SelectedItemIndex,
-                                   IsHovered = i == hoveredItemIndex
-                               };
+                {
+                    Font = Font,
+                    FontBursh = i == selectedItemIndex ? Brushes.Black : Brushes.White,
+                    TextRect = new RectangleF(textRect.Location, textRect.Size),
+                    StringFormat = sf,
+                    IsSelected = i == SelectedItemIndex,
+                    IsHovered = i == hoveredItemIndex
+                };
                 //call drawing
                 VisibleItems[i].OnPaint(args);
             }
@@ -256,7 +257,7 @@ namespace AutocompleteMenuNS
             //    toolTip.Show(text, this, Width + 3, 0, 3000);
             //}
 
-            
+
         }
     }
 }

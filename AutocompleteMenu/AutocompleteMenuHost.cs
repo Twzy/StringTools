@@ -21,7 +21,7 @@ namespace AutocompleteMenuNS
                 }
 
                 Host = new ToolStripControlHost(ListView as Control);
-                Host.Margin = new Padding(2, 2, 2, 2);
+                Host.Margin = new Padding(0, 0, 0, 0);
                 Host.Padding = Padding.Empty;
                 Host.AutoSize = false;
                 Host.AutoToolTip = false;
@@ -52,7 +52,7 @@ namespace AutocompleteMenuNS
         internal void CalcSize()
         {
             Host.Size = (ListView as Control).Size;
-            Size = new System.Drawing.Size((ListView as Control).Size.Width + 4, (ListView as Control).Size.Height + 4);
+            Size = new System.Drawing.Size((ListView as Control).Size.Width , (ListView as Control).Size.Height );
         }
 
         public override RightToLeft RightToLeft

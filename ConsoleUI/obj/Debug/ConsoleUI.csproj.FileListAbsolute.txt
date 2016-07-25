@@ -1,0 +1,6 @@
+F:\GitHub\StringTools\ConsoleUI\bin\Debug\ConsoleUI.dll
+F:\GitHub\StringTools\ConsoleUI\bin\Debug\ConsoleUI.pdb
+F:\GitHub\StringTools\ConsoleUI\obj\Debug\ConsoleUI.NumberedConsoleTextBox.resources
+F:\GitHub\StringTools\ConsoleUI\obj\Debug\ConsoleUI.csproj.GenerateResource.Cache
+F:\GitHub\StringTools\ConsoleUI\obj\Debug\ConsoleUI.dll
+F:\GitHub\StringTools\ConsoleUI\obj\Debug\ConsoleUI.pdb

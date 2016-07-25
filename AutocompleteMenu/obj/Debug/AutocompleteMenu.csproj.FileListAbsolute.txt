@@ -1,0 +1,7 @@
+F:\GitHub\StringTools\AutocompleteMenu\bin\Debug\AutocompleteMenu.dll
+F:\GitHub\StringTools\AutocompleteMenu\bin\Debug\AutocompleteMenu.pdb
+F:\GitHub\StringTools\AutocompleteMenu\obj\Debug\AutocompleteMenu.csprojResolveAssemblyReference.cache
+F:\GitHub\StringTools\AutocompleteMenu\obj\Debug\AutocompleteMenuNS.AutocompleteMenu.resources
+F:\GitHub\StringTools\AutocompleteMenu\obj\Debug\AutocompleteMenu.csproj.GenerateResource.Cache
+F:\GitHub\StringTools\AutocompleteMenu\obj\Debug\AutocompleteMenu.dll
+F:\GitHub\StringTools\AutocompleteMenu\obj\Debug\AutocompleteMenu.pdb

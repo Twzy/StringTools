@@ -26,10 +26,11 @@ namespace AutocompleteMenuNS
         public RectangleF TextRect { get; internal set; }
         public StringFormat StringFormat { get; internal set; }
         public Font Font { get; internal set; }
+        public Brush FontBursh { get; internal set; }
         public bool IsSelected { get; internal set; }
         public bool IsHovered { get; internal set; }
 
-        public PaintItemEventArgs(Graphics graphics, Rectangle clipRect):base(graphics, clipRect)
+        public PaintItemEventArgs(Graphics graphics, Rectangle clipRect) : base(graphics, clipRect)
         {
         }
     }

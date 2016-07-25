@@ -1,0 +1,12 @@
+F:\GitHub\StringTools\StringTools\bin\Debug\StringTools.exe
+F:\GitHub\StringTools\StringTools\bin\Debug\StringTools.pdb
+F:\GitHub\StringTools\StringTools\bin\Debug\AutocompleteMenu.dll
+F:\GitHub\StringTools\StringTools\bin\Debug\ConsoleUI.dll
+F:\GitHub\StringTools\StringTools\bin\Debug\AutocompleteMenu.pdb
+F:\GitHub\StringTools\StringTools\bin\Debug\ConsoleUI.pdb
+F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.csprojResolveAssemblyReference.cache
+F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.FrmMain.resources
+F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.Properties.Resources.resources
+F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.csproj.GenerateResource.Cache
+F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.exe
+F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.pdb

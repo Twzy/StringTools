@@ -4,3 +4,10 @@ F:\GitHub\StringTools\ConsoleUI\obj\Debug\ConsoleUI.NumberedConsoleTextBox.resou
 F:\GitHub\StringTools\ConsoleUI\obj\Debug\ConsoleUI.csproj.GenerateResource.Cache
 F:\GitHub\StringTools\ConsoleUI\obj\Debug\ConsoleUI.dll
 F:\GitHub\StringTools\ConsoleUI\obj\Debug\ConsoleUI.pdb
+C:\Users\墨云\Source\Repos\StringTools\ConsoleUI\bin\Debug\ConsoleUI.dll
+C:\Users\墨云\Source\Repos\StringTools\ConsoleUI\bin\Debug\ConsoleUI.pdb
+C:\Users\墨云\Source\Repos\StringTools\ConsoleUI\obj\Debug\ConsoleUI.csprojResolveAssemblyReference.cache
+C:\Users\墨云\Source\Repos\StringTools\ConsoleUI\obj\Debug\ConsoleUI.NumberedConsoleTextBox.resources
+C:\Users\墨云\Source\Repos\StringTools\ConsoleUI\obj\Debug\ConsoleUI.csproj.GenerateResource.Cache
+C:\Users\墨云\Source\Repos\StringTools\ConsoleUI\obj\Debug\ConsoleUI.dll
+C:\Users\墨云\Source\Repos\StringTools\ConsoleUI\obj\Debug\ConsoleUI.pdb

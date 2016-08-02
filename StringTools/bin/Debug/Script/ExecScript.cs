@@ -133,12 +133,12 @@ namespace StringTools
                         StringBuilder regxsbr = new StringBuilder();
                         foreach (Match i in ms)
                         {
-                            regxsbr.AppendLine("---------------------------");
+                            //regxsbr.AppendLine("---------------------------");
                             regxsbr.AppendFormat("{0}\r\n", i.Value);
-                            foreach (Group j in i.Groups)
-                            {
-                                regxsbr.AppendFormat("    {0}\r\n", j.Value);
-                            }
+                            //foreach (Group j in i.Groups)
+                           // {
+                            //    regxsbr.AppendFormat("    {0}\r\n", j.Value);
+                            //}
                         }
 
                         Print(regxsbr.ToString());

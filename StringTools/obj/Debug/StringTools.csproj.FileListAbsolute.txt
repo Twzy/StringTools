@@ -10,3 +10,15 @@ F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.Properties.Resources.res
 F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.csproj.GenerateResource.Cache
 F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.exe
 F:\GitHub\StringTools\StringTools\obj\Debug\StringTools.pdb
+C:\Users\墨云\Source\Repos\StringTools\StringTools\obj\Debug\StringTools.exe
+C:\Users\墨云\Source\Repos\StringTools\StringTools\obj\Debug\StringTools.pdb
+C:\Users\墨云\Source\Repos\StringTools\StringTools\bin\Debug\StringTools.exe
+C:\Users\墨云\Source\Repos\StringTools\StringTools\bin\Debug\StringTools.pdb
+C:\Users\墨云\Source\Repos\StringTools\StringTools\bin\Debug\AutocompleteMenu.dll
+C:\Users\墨云\Source\Repos\StringTools\StringTools\bin\Debug\ConsoleUI.dll
+C:\Users\墨云\Source\Repos\StringTools\StringTools\bin\Debug\AutocompleteMenu.pdb
+C:\Users\墨云\Source\Repos\StringTools\StringTools\bin\Debug\ConsoleUI.pdb
+C:\Users\墨云\Source\Repos\StringTools\StringTools\obj\Debug\StringTools.csprojResolveAssemblyReference.cache
+C:\Users\墨云\Source\Repos\StringTools\StringTools\obj\Debug\StringTools.FrmMain.resources
+C:\Users\墨云\Source\Repos\StringTools\StringTools\obj\Debug\StringTools.Properties.Resources.resources
+C:\Users\墨云\Source\Repos\StringTools\StringTools\obj\Debug\StringTools.csproj.GenerateResource.Cache

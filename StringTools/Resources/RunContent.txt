@@ -1,0 +1,9 @@
+    <div class="run">
+        <label >$CMD$</label>
+        <div class="desc">
+            $DSC$
+        </div>
+        
+         $CNT$
+ 
+    </div>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style type="text/css">
+        body {
+            font-family: Helvetica, arial, freesans, clean, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            background-color: aliceblue;
+        }
+
+        .main {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .mainconten {
+            margin-left: 100px;
+        }
+
+
+        .title {
+            font-size: x-large;
+            color: black;
+            height: 40px;
+            font-weight: 600;
+        }
+
+        .run {
+            margin-left: 10px;
+            margin-top: 25px;
+            border: 1px solid #cecccc;
+            background-color: white;
+            padding: 30px;
+        }
+
+            .run label {
+                font-size: 16px;
+                font-weight: 600;
+                border-left: 4px solid #93b00b;
+                padding: 0 10px;
+            }
+
+            .run .line {
+                font-family: Consolas;
+                background-color: darkslategray;
+                color: greenyellow;
+                padding: 16px;
+            }
+
+            .run .content {
+                font-family: Consolas;
+                background-color: #DDD;
+                color: gray;
+                padding: 16px;
+            }
+
+            .run .desc {
+                margin-left: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+
+        .hrline {
+            margin-right: 50%;
+            margin-bottom: 20px;
+            border: 0.5px solid #808080
+        }
+
+        blockquote {
+            margin-top: 8px;
+            margin-left: 10px;
+            margin-bottom: 8px;
+            border-left: 4px solid #DDD;
+            padding: 0 15px;
+            color: #777;
+        }
+
+            blockquote > :first-child {
+                margin-top: 0px;
+            }
+
+            blockquote > :last-child {
+                margin-bottom: 0px;
+            }
+
+        .hreflst {
+            width: 100px;
+            padding: 20px;
+            top: 130px;
+            background-color: transparent;
+            margin-top:130px;
+            margin-left:0px;
+            float:left;
+        }
+
+            .hreflst a {
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+            }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="hreflst">
+            <a href="#title">开始</a><br/>
+            $HREF$
+        </div>
+        <div class="mainconten">
+            <div class="title"> $TIT$</div>
+            <blockquote>
+                <p>$CNT$</p>
+            </blockquote>
+
+            $RUN$
+
+        </div>
+    </div>
+</body>
+</html>

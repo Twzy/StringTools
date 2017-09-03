@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3687D373-2D32-47AD-A808-0B06075B46B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StringTools</RootNamespace>
+    <AssemblyName>StringTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>山羊座 %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSScriptLibrary">
+      <HintPath>E:\Github\StringTools\StringTools\bin\Debug\CSScriptLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.TextEditor, Version=3.3.7.6486, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetIde.ICSharpCode.TextEditor.3.3.7.6487\lib\net20\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CmdLogHandler.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="FrmCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCode.Designer.cs">
+      <DependentUpon>FrmCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCommandEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCommandEditor.Designer.cs">
+      <DependentUpon>FrmCommandEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDocViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDocViewer.Designer.cs">
+      <DependentUpon>FrmDocViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CodeModel.cs" />
+    <Compile Include="Model\CommandModel.cs" />
+    <Compile Include="Model\DocumentModel.cs" />
+    <Compile Include="Model\RunModel.cs" />
+    <Compile Include="BaseCommand.cs" />
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyFrm\FrmCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyFrm\FrmCode.Designer.cs">
+      <DependentUpon>FrmCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyFrm\FrmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyFrm\FrmList.Designer.cs">
+      <DependentUpon>FrmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyFrm\PropertyCodeConvert.cs" />
+    <Compile Include="PropertyFrm\PropertyListText.cs" />
+    <Compile Include="PropertyFrm\PropertyCodeText.cs" />
+    <Compile Include="PropertyFrm\PropertyMultiText.cs" />
+    <Compile Include="Tools.cs" />
+    <EmbeddedResource Include="FrmCode.resx">
+      <DependentUpon>FrmCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCommandEditor.resx">
+      <DependentUpon>FrmCommandEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDocViewer.resx">
+      <DependentUpon>FrmDocViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PropertyFrm\FrmCode.resx">
+      <DependentUpon>FrmCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin_tools.ico" />
+    <Content Include="DocPage.html" />
+    <Content Include="山羊座 %281%29.ico" />
+    <None Include="Resources\helpContent.txt" />
+    <None Include="Resources\MainContent.txt" />
+    <None Include="Resources\RunContent.txt" />
+    <None Include="Resources\CmdContent.txt" />
+    <None Include="Resources\IOContent.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutocompleteMenu\AutocompleteMenu.csproj">
+      <Project>{43cbc9aa-6a8e-463f-83a9-aff3124afdb6}</Project>
+      <Name>AutocompleteMenu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConsoleUI\ConsoleUI.csproj">
+      <Project>{ce2f79ca-31ba-4902-8f26-4b15676ff5c8}</Project>
+      <Name>ConsoleUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -22,6 +22,8 @@ namespace StringTools
         {
             InitializeComponent();
 
+            FormClosing += FrmMain_FormClosing;
+
             //RichTextBox 输入字体一致性设置（）
             txtInput.LanguageOption = RichTextBoxLanguageOptions.UIFonts;
             txtOutput.LanguageOption = RichTextBoxLanguageOptions.UIFonts;
@@ -33,6 +35,11 @@ namespace StringTools
                 IniteConsole();//初始化命令行控件
                 IniteAutoCompete();//初始化自动补全控件
             }
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Common.Log();
         }
 
 
@@ -74,6 +81,7 @@ namespace StringTools
                 ((BaseCommand)ExecScript).CurrMainForm = this;
                 ((BaseCommand)ExecScript).logHandler = OnCmdLogArrivl;
 
+                AsmHelper.InvokeInst(ExecScript, "*.Inite");//初始化
                 UnEscapeArry = (string[])AsmHelper.InvokeInst(ExecScript, "*.UnEscape");
 
                 return true;
@@ -82,6 +90,7 @@ namespace StringTools
             {
                 MessageBox.Show("脚本加载错误:\r\n" + ex.Message, "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 new FrmCode().ShowDialog();
+                Application.Exit();
                 return false;
             }
         }
@@ -157,6 +166,12 @@ Common.Code.CommandList.Count().ToString()));//写入命令行头部信息，并
         Model.RunModel CurrRun;
         void TxtCon_ReadCommandtEvent(object sender, ConsoleUI.ConsoleEditEventArgs e)
         {
+            if (string.IsNullOrEmpty(e.Message.Trim()))
+            {
+                txtCon.Write();
+                return;
+            }
+
             CurrRun = new Model.RunModel();
             CurrRun.CommandLine = e.Message;
 

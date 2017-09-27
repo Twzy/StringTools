@@ -44,9 +44,7 @@ namespace StringTools.Model
         /// <summary>
         /// 代码内容
         /// </summary>
-        [Description("代码内容"), DisplayName("代码"), Category("基本信息"),
-            Editor(typeof(StringTools.PropertyFrm.PropertyCodeText),
-            typeof(System.Drawing.Design.UITypeEditor))]
+        [BrowsableAttribute(false)]
         public string Content { get; set; } = "//ToDo:进行命令代码的实际编写";
         #endregion
 
@@ -102,10 +100,10 @@ namespace StringTools.Model
 
             foreach (var item in codeArry)
             {
-                sbr.AppendLine(offsetSpace +  item);
+                sbr.AppendLine(offsetSpace + item);
             }
 
-           // sbr.Append(Content);
+            // sbr.Append(Content);
 
             sbr.AppendLine(offsetSpace + "}");
 

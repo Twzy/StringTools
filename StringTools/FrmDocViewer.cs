@@ -136,7 +136,7 @@ namespace StringTools
 
         private void FrmDocViewer_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Common.Log();
+            //Common.Log();
         }
 
         private void btnOpen_Click(object sender, EventArgs e)

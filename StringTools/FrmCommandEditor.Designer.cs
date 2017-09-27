@@ -70,6 +70,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.treeTool = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnInte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -84,7 +85,7 @@
             // 
             this.btnPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPreview.Location = new System.Drawing.Point(958, 620);
-            this.btnPreview.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(67, 22);
             this.btnPreview.TabIndex = 4;
@@ -96,7 +97,7 @@
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.Location = new System.Drawing.Point(1050, 620);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(68, 22);
             this.btnOK.TabIndex = 6;
@@ -108,7 +109,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Location = new System.Drawing.Point(1138, 620);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(68, 22);
             this.btnCancel.TabIndex = 7;
@@ -122,7 +123,7 @@
             this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertyGrid1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.propertyGrid1.Location = new System.Drawing.Point(0, 0);
-            this.propertyGrid1.Margin = new System.Windows.Forms.Padding(2);
+            this.propertyGrid1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.propertyGrid1.Name = "propertyGrid1";
             this.propertyGrid1.PropertySort = System.Windows.Forms.PropertySort.Categorized;
             this.propertyGrid1.Size = new System.Drawing.Size(272, 590);
@@ -137,10 +138,10 @@
             this.txtPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPreview.IsReadOnly = false;
             this.txtPreview.Location = new System.Drawing.Point(0, 0);
-            this.txtPreview.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPreview.Name = "txtPreview";
             this.txtPreview.ShowVRuler = false;
-            this.txtPreview.Size = new System.Drawing.Size(642, 590);
+            this.txtPreview.Size = new System.Drawing.Size(641, 590);
             this.txtPreview.TabIndex = 5;
             this.txtPreview.TextChanged += new System.EventHandler(this.txtPreview_TextChanged);
             // 
@@ -152,7 +153,7 @@
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(9, 10);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -183,7 +184,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.treeTool);
             this.splitContainer2.Size = new System.Drawing.Size(928, 592);
-            this.splitContainer2.SplitterDistance = 644;
+            this.splitContainer2.SplitterDistance = 643;
             this.splitContainer2.TabIndex = 0;
             // 
             // treeTool
@@ -251,7 +252,7 @@
             treeNode17,
             treeNode18});
             this.treeTool.SelectedImageIndex = 0;
-            this.treeTool.Size = new System.Drawing.Size(278, 590);
+            this.treeTool.Size = new System.Drawing.Size(279, 590);
             this.treeTool.TabIndex = 0;
             this.treeTool.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeTool_ItemDrag);
             // 
@@ -266,17 +267,29 @@
             this.imageList1.Images.SetKeyName(4, "T_Comment_Sm_N.png");
             this.imageList1.Images.SetKeyName(5, "T_WrapTag_Sm_N.png");
             // 
+            // btnInte
+            // 
+            this.btnInte.Location = new System.Drawing.Point(10, 620);
+            this.btnInte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInte.Name = "btnInte";
+            this.btnInte.Size = new System.Drawing.Size(86, 22);
+            this.btnInte.TabIndex = 10;
+            this.btnInte.Text = "初始化方法";
+            this.btnInte.UseVisualStyleBackColor = true;
+            this.btnInte.Click += new System.EventHandler(this.btnInte_Click);
+            // 
             // FrmCommandEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1223, 662);
+            this.Controls.Add(this.btnInte);
             this.Controls.Add(this.btnPreview);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmCommandEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "命令编辑器";
@@ -303,5 +316,6 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TreeView treeTool;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button btnInte;
     }
 }

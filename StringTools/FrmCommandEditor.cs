@@ -52,7 +52,7 @@ namespace StringTools
             }
             foreach (var item in Common.Code.UsingAllList)
             {
-                treeTool.Nodes[4].Nodes.Add(new TreeNode(item,5,5));
+                treeTool.Nodes[4].Nodes.Add(new TreeNode(item, 5, 5));
             }
 
             treeTool.ExpandAll();
@@ -88,24 +88,28 @@ namespace StringTools
             txtPreview.Text = cmd.ToString(0);
         }
 
-        private void txtPreview_TextChanged(object sender, EventArgs e)
-        {
-            cmd.Content = Tools.GetInnerCode(txtPreview.Text);
-        }
 
 
         private void treeTool_ItemDrag(object sender, ItemDragEventArgs e)
         {
-            TreeNode node= e.Item as TreeNode;
+            TreeNode node = e.Item as TreeNode;
             if (node == null)
                 return;
 
-            if (node.Parent == null||node.Parent.Index>2)
+            if (node.Parent == null || node.Parent.Index > 2)
                 return;
 
             DoDragDrop(((TreeNode)e.Item).Text, DragDropEffects.Copy);
         }
 
+        private void btnInte_Click(object sender, EventArgs e)
+        {
+            new FrmIniteCode().ShowDialog();
+        }
 
+        private void txtPreview_TextChanged(object sender, EventArgs e)
+        {
+            cmd.Content = Tools.GetInnerCode(txtPreview.Text);
+        }
     }
 }

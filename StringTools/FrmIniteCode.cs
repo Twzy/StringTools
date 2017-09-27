@@ -7,30 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace StringTools.PropertyFrm
+namespace StringTools
 {
-    public partial class FrmCode : Form
+    public partial class FrmIniteCode : Form
     {
-        public FrmCode()
+        public FrmIniteCode()
         {
             InitializeComponent();
 
             txtCodeEditor.SetHighlighting("C#");
             //txtCodeEditor.IsReadOnly = true;
+
+            txtCodeEditor.Text = Common.Code.IniteContent;
         }
 
-        public void LoadCode(string code)
-        {
-            txtCodeEditor.Text = code;
-        }
 
-        public string GetCode()
-        {
-            return txtCodeEditor.Text;
-        }
+
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            StringBuilder sbr = new StringBuilder();
+            foreach (var item in txtCodeEditor.Text.Split("\r\n".ToArray()))
+            {
+                sbr.AppendLine("            " + item);
+            }
+            Common.Code.IniteContent = sbr.ToString();
+
             this.DialogResult = DialogResult.OK;
         }
     }

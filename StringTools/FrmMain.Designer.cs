@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.labStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.SP1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.txtInput = new System.Windows.Forms.RichTextBox();
             this.txtOutput = new System.Windows.Forms.RichTextBox();
@@ -41,10 +41,10 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.autocompleteMenu1 = new AutocompleteMenuNS.AutocompleteMenu();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP1)).BeginInit();
+            this.SP1.Panel1.SuspendLayout();
+            this.SP1.Panel2.SuspendLayout();
+            this.SP1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -57,9 +57,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.labStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 356);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 451);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(637, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(849, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -70,25 +71,27 @@
             this.labStatus.Name = "labStatus";
             this.labStatus.Size = new System.Drawing.Size(0, 17);
             // 
-            // splitContainer1
+            // SP1
             // 
-            this.splitContainer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.SP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SP1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SP1.Location = new System.Drawing.Point(0, 0);
+            this.SP1.Margin = new System.Windows.Forms.Padding(0);
+            this.SP1.Name = "SP1";
             // 
-            // splitContainer1.Panel1
+            // SP1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            this.SP1.Panel1.Controls.Add(this.splitContainer2);
+            this.SP1.Panel1Collapsed = true;
             // 
-            // splitContainer1.Panel2
+            // SP1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.txtCon);
-            this.splitContainer1.Size = new System.Drawing.Size(1225, 677);
-            this.splitContainer1.SplitterDistance = 639;
-            this.splitContainer1.TabIndex = 10;
+            this.SP1.Panel2.Controls.Add(this.txtCon);
+            this.SP1.Size = new System.Drawing.Size(1633, 846);
+            this.SP1.SplitterDistance = 851;
+            this.SP1.SplitterWidth = 5;
+            this.SP1.TabIndex = 10;
             // 
             // splitContainer2
             // 
@@ -103,13 +106,16 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.txtInput);
+            this.splitContainer2.Panel1MinSize = 300;
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.txtOutput);
             this.splitContainer2.Panel2.Controls.Add(this.statusStrip1);
-            this.splitContainer2.Size = new System.Drawing.Size(639, 677);
-            this.splitContainer2.SplitterDistance = 293;
+            this.splitContainer2.Panel2MinSize = 300;
+            this.splitContainer2.Size = new System.Drawing.Size(851, 846);
+            this.splitContainer2.SplitterDistance = 366;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 9;
             // 
             // txtInput
@@ -121,11 +127,13 @@
             this.txtInput.Font = new System.Drawing.Font("Consolas", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtInput.Location = new System.Drawing.Point(0, 0);
+            this.txtInput.Margin = new System.Windows.Forms.Padding(4);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(637, 291);
+            this.txtInput.Size = new System.Drawing.Size(849, 364);
             this.txtInput.TabIndex = 1;
             this.txtInput.Text = "";
             this.txtInput.WordWrap = false;
+            this.txtInput.AcceptsTab = true;
             // 
             // txtOutput
             // 
@@ -139,10 +147,11 @@
             this.txtOutput.Margin = new System.Windows.Forms.Padding(0);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(637, 356);
+            this.txtOutput.Size = new System.Drawing.Size(849, 451);
             this.txtOutput.TabIndex = 2;
             this.txtOutput.Text = "";
             this.txtOutput.WordWrap = false;
+            this.txtOutput.AcceptsTab = true;
             // 
             // txtCon
             // 
@@ -155,12 +164,13 @@
             this.txtCon.HeadText = "";
             this.txtCon.IsAcceptInput = true;
             this.txtCon.Location = new System.Drawing.Point(0, 0);
-            this.txtCon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCon.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtCon.Name = "txtCon";
-            this.txtCon.Size = new System.Drawing.Size(580, 675);
+            this.txtCon.Size = new System.Drawing.Size(1631, 844);
             this.txtCon.TabIndex = 0;
             this.txtCon.Text = "";
             this.txtCon.WordWrap = false;
+            this.txtCon.AcceptsTab = true;
             // 
             // imageList1
             // 
@@ -194,23 +204,24 @@
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1225, 677);
-            this.Controls.Add(this.splitContainer1);
+            this.ClientSize = new System.Drawing.Size(1633, 846);
+            this.Controls.Add(this.SP1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "字符串处理工具";
             this.Shown += new System.EventHandler(this.FrmMain_Shown);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.SP1.Panel1.ResumeLayout(false);
+            this.SP1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SP1)).EndInit();
+            this.SP1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
@@ -223,7 +234,6 @@
         #endregion
 
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private AutocompleteMenuNS.AutocompleteMenu autocompleteMenu1;
         private System.Windows.Forms.ImageList imageList1;
@@ -232,6 +242,7 @@
         public System.Windows.Forms.RichTextBox txtOutput;
         public ConsoleUI.ConsoleTextBox txtCon;
         public System.Windows.Forms.ToolStripStatusLabel labStatus;
+        public System.Windows.Forms.SplitContainer SP1;
     }
 }
 

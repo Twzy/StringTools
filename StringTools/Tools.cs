@@ -67,7 +67,7 @@ namespace StringTools
         /// <returns></returns>
         public static string GetInnerCode(string commandCode)
         {
-            string regexp = @"\r\n\s*public\s+void\s+\w+\([\w,\s\[\]]+\)\s*\r\n\s*{(?<content>.*)}";
+            string regexp = @"\r\n\s*public\s+void\s+\w+\([\w,\s\[\]]*\)\s*\r\n\s*{(?<content>.*)}";
             var m = Regex.Match(commandCode, regexp, RegexOptions.IgnoreCase | RegexOptions.Singleline);
             if (m.Success)
             {
@@ -83,7 +83,7 @@ namespace StringTools
         /// <returns></returns>
         public static string[] RepEscape(string[] args)
         {
-            for (int i = 1; i < args.Length; i++)
+            for (int i = 0; i < args.Length; i++)
             {
 
                 args[i] = args[i].Replace("\\s", " ").Replace("\\t", "\t")

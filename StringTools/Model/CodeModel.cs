@@ -14,6 +14,7 @@ namespace StringTools.Model
         public readonly string NAME = "ExecScript";
         public readonly string CMDLIST = "public Dictionary<string, string> GetCommandList()";
         public readonly string UnEscape = "public string[] UnEscape()";
+        public readonly string INITEMethond = "public void Inite()";
         public readonly string NAMESPACE = "StringTools";
         public readonly string CONTENTS = @"
 //墨云软件
@@ -128,7 +129,6 @@ namespace StringTools.Model
         }
         #endregion
 
-
         #region using
         public List<string> UsingAllList
         {
@@ -169,6 +169,13 @@ namespace StringTools.Model
             }
         }
         #endregion
+
+
+        /// <summary>
+        /// 初始化代码
+        /// </summary>
+        public string IniteContent { get; set; } = "//初始化代码";
+
 
         /// <summary>
         /// 命令列表
@@ -212,6 +219,20 @@ namespace StringTools.Model
             {
                 sbr.AppendLine(item.ToString());
             }
+
+
+            //命令分割线
+            sbr.AppendLine("        //#############################################################");
+
+            //初始化方法
+            sbr.AppendLine("        /// <summary>");
+            sbr.AppendLine("        /// 初始化方法");
+            sbr.AppendLine("        /// </summary>");
+            sbr.AppendLine("        " + INITEMethond);
+            sbr.AppendLine("        {");
+            sbr.AppendLine(IniteContent);
+            sbr.AppendLine("        }");
+            sbr.AppendLine();
 
 
             //参数非转义命令列表
